@@ -1,0 +1,2 @@
+[1002/070017.418:ERROR:http_transport_win.cc(273)] WinHttpSendRequest: No se pudo resolver el nombre de servidor o su dirección (0x2ee7)
+[1209/210355.927:ERROR:http_transport_win.cc(273)] WinHttpSendRequest: No se pudo resolver el nombre de servidor o su dirección (0x2ee7)

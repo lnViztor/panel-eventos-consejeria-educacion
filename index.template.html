@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tablero de Entrada</title>
+	<link href="https://fonts.googleapis.com/css?family=Cinzel:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
+	<link href="css/reloj.css" rel="stylesheet" type="text/css">
+	<link href="css/azul.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="avisos" class="scroll">
+        <!--INSERT HERE-->
+	</div>
+	<div id="logo">
+		<img src="img/Logocorporativo2.png">
+		<p>Consejería de Educación, Cultura y Deportes</p>
+	</div>
+	<div id="clock" class="dark">
+	    <div class="display">
+	        <div class="weekdays"></div>
+	        <div class="ampm"></div>
+	        <div class="alarm"></div>
+	        <div class="digits"></div>
+	    </div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/reloj.js"></script>
+	<script src="js/scroll.js"></script>
+	<script>
+    	$(document).ready(function() {
+    		$("#avisos").verticalScroll();
+  		});
+	</script>
+</body>
+</html>

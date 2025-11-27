@@ -1,0 +1,89 @@
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*-------------------------
+	General Styles
+
+azul institucional: #002855;
++ claro: #173B64;
+blanco: #E7EBEF;
++ oscuro: #000B18;
+--------------------------*/
+
+html {
+  background-color: #002855;
+  overflow: hidden;
+}
+
+body {
+  font: 16px Arial, sans-serif;
+  color: #e7ebef;
+  z-index: 1;
+}
+
+section,
+footer,
+header,
+aside {
+  display: block;
+}
+
+/*-------------------------
+	Logo Styles
+--------------------------*/
+
+#logo {
+  width: 250px;
+  position: absolute;
+  right: 0px;
+  bottom: 50px;
+}
+
+#logo img {
+  width: 200px;
+  padding: 15px 25px;
+}
+
+#logo p {
+  color: #75787b;
+  padding: 0px 25px;
+  font: 16px Arial, sans-serif;
+  text-align: center;
+}
+
+/*-------------------------
+	Avisos Styles
+--------------------------*/
+#avisos {
+  width: 650px;
+  padding-left: 20px;
+}
+
+#linea {
+  padding: 20px 20px;
+  margin: 5px 0px;
+  border-bottom: 5px solid #e7ebef;
+}
+
+#linea .lugarhora {
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  font-size: 42px;
+  padding: 10px 0px;
+}
+
+#linea .evento {
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 36px;
+  font-weight: lighter;
+  padding: 0px 0px 10px 0px;
+  text-shadow: 3px 2px black;
+  text-indent: 0.4cm;
+}
