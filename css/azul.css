@@ -17,12 +17,12 @@ blanco: #E7EBEF;
 --------------------------*/
 
 html {
-  background-color: #002855;
+  background-color: #ffffff;
   overflow: hidden;
 }
 
 body {
-  font: 16px Arial, sans-serif;
+  font: 16px "NunitoLocal", Arial, sans-serif;
   color: #e7ebef;
   z-index: 1;
 }
@@ -53,7 +53,7 @@ aside {
 #logo p {
   color: #75787b;
   padding: 0px 25px;
-  font: 16px Arial, sans-serif;
+  /* font: 16px Arial, sans-serif; */
   text-align: center;
 }
 
@@ -61,29 +61,34 @@ aside {
 	Avisos Styles
 --------------------------*/
 #avisos {
-  width: 650px;
+  width: 900px;
   padding-left: 20px;
+  border-radius: 50px;
 }
 
 #linea {
   padding: 20px 20px;
   margin: 5px 0px;
-  border-bottom: 5px solid #e7ebef;
+  border-bottom: 2px solid #0a58ca;
 }
 
 #linea .lugarhora {
-  font-family: "Cinzel", serif;
-  font-weight: bold;
+  font-family: "Nunito-Bold";
+  font-weight: 700;
   font-size: 42px;
-  padding: 10px 0px;
+  /* padding: 10px 0px; */
+  background-color: #0a58ca;
+  border-radius: 20px;
+  text-align: center;
+  width: auto;
 }
 
 #linea .evento {
-  font-family: "Work Sans", sans-serif;
-  font-weight: lighter;
+  font-family: "Nunito-Light";
+  font-weight: 300;
   font-size: 36px;
-  font-weight: lighter;
   padding: 0px 0px 10px 0px;
-  text-shadow: 3px 2px black;
+  /* text-shadow: 3px 2px black; */
   text-indent: 0.4cm;
+  color: #0a58ca;
 }

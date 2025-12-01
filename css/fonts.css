@@ -1,0 +1,22 @@
+/* Fuentes locales: Nunito descargada en fonts/Nunito/static/ */
+
+@font-face {
+  font-family: "Nunito-Light";
+  src: url("../fonts/Nunito/static/Nunito-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../fonts/Nunito/static/Nunito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Uso por defecto */
+html,
+body {
+  font-family: "Nunito-Light", Arial, sans-serif;
+}
