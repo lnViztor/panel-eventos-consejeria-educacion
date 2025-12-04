@@ -19,9 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
     logoContainer.classList.add(positions[currentPositionIndex]);
   }
 
+  // Cambiar la posición del logo cada 1 hora
+  setInterval(changeLogoPosition, 1 * 60 * 60 * 1000);
+
   // Cambiar la posición cada 3 horas (3 * 60 * 60 * 1000 milisegundos)
-  setInterval(changeLogoPosition, 3 * 60 * 60 * 1000);
-  //setInterval(changeLogoPosition, 5000);
+  //setInterval(changeLogoPosition, 3 * 60 * 60 * 1000);
+  //cambiar la posición cada 5 segundos para pruebas
+  s; //etInterval(changeLogoPosition, 5000);
 
   // Establecer una posición inicial al cargar la página
   logoContainer.classList.add(positions[currentPositionIndex]);
