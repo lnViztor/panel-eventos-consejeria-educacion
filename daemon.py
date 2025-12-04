@@ -169,7 +169,7 @@ class Notification:
 
                         divs = ""
                         for evento in eventos:
-                            divs = divs + '<div id="linea"><p class="lugarhora">' +\
+                            divs = "⏰" + divs + '<div id="linea"><p class="lugarhora">' + "🗒️"+ \
                                 evento[0] + '</p><p class="evento">' +\
                                 evento[1] + '</p></div>'
 
