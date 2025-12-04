@@ -7,15 +7,6 @@
   padding: 0;
 }
 
-/*-------------------------
-	General Styles
-
-azul institucional: #002855;
-+ claro: #173B64;
-blanco: #E7EBEF;
-+ oscuro: #000B18;
---------------------------*/
-
 html {
   background-color: #e0e0e0;
   overflow: hidden;
@@ -87,14 +78,41 @@ aside {
   position: relative;
 }
 
-#avisos {
+.avisos-header {
   width: 1000px;
-  padding-left: 20px;
-  border-radius: 15px;
+  padding: 12px 20px;
+  font-family: "Nunito-Bold";
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #ffffff; /* texto en blanco, como el reloj */
+  text-align: center;
+  margin: 5px 0 12px 0;
   position: absolute;
-  top: 0;
+  top: 20px;
+  left: 20px;
+  z-index: 3; /* aseguramos que esté por encima del scroll */
+  background-color: #3c5ad9; /* mismo color azul del recuadro del reloj */
+  border-radius: 10px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.15);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#avisos {
+  width: 1100px;
+  position: absolute;
+  top: 80px; /* comienza debajo del encabezado */
+  bottom: 0;
+  left: 0;
+  overflow: hidden; /* recorta el contenido que se desplaza */
+  z-index: 1; /* debajo del encabezado */
+}
+
+.scroll-content {
+  width: 100%;
   animation: scroll 30s linear infinite;
-  /* Usamos transform para una animación más fluida */
   will-change: transform;
 }
 
@@ -112,19 +130,20 @@ aside {
 
 #linea {
   padding: 20px 20px;
-  margin: 5px 0px;
+  margin: 20px 20px;
   border-bottom: 2px solid #202951;
+  width: 1000px;
 }
 
 #linea .lugarhora {
   font-family: "Nunito-Bold";
   font-weight: 700;
   font-size: 42px;
-  /* padding: 10px 0px; */
   background-color: #1e73bd;
   border-radius: 10px;
   text-align: center;
-  width: 300px;
+  width: 400px;
+  margin-left: -20px;
 }
 
 #linea .evento {
