@@ -17,7 +17,7 @@ blanco: #E7EBEF;
 --------------------------*/
 
 html {
-  background-color: #ffffff;
+  background-color: #e0e0e0;
   overflow: hidden;
 }
 
@@ -41,8 +41,29 @@ aside {
 #logo {
   width: 250px;
   position: absolute;
+  transition: all 1s ease-in-out; /* Añadimos una transición suave */
+}
+
+#logo.pos-bottom-right {
   right: 0px;
   bottom: 50px;
+}
+
+/* "Falso" bottom-left, ahora será bottom-right pero más arriba */
+#logo.pos-bottom-left {
+  right: 0px;
+  bottom: 250px; /* Sube el logo */
+}
+
+#logo.pos-top-right {
+  right: 0px;
+  top: 250px;
+}
+
+/* "Falso" top-left, ahora será top-right pero más abajo */
+#logo.pos-top-left {
+  right: 0px;
+  top: 450px; /* Baja el logo */
 }
 
 #logo img {
@@ -60,16 +81,39 @@ aside {
 /*-------------------------
 	Avisos Styles
 --------------------------*/
+#avisos-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
 #avisos {
-  width: 900px;
+  width: 1000px;
   padding-left: 20px;
-  border-radius: 50px;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  animation: scroll 30s linear infinite;
+  /* Usamos transform para una animación más fluida */
+  will-change: transform;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 #linea {
   padding: 20px 20px;
   margin: 5px 0px;
-  border-bottom: 2px solid #0a58ca;
+  border-bottom: 2px solid #202951;
 }
 
 #linea .lugarhora {
@@ -77,18 +121,18 @@ aside {
   font-weight: 700;
   font-size: 42px;
   /* padding: 10px 0px; */
-  background-color: #0a58ca;
-  border-radius: 20px;
+  background-color: #1e73bd;
+  border-radius: 10px;
   text-align: center;
-  width: auto;
+  width: 300px;
 }
 
 #linea .evento {
-  font-family: "Nunito-Light";
+  font-family: "Rubik-Light";
   font-weight: 300;
   font-size: 36px;
   padding: 0px 0px 10px 0px;
   /* text-shadow: 3px 2px black; */
   text-indent: 0.4cm;
-  color: #0a58ca;
+  color: #202951;
 }

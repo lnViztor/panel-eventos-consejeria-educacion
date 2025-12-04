@@ -9,47 +9,51 @@
     <link href="css/azul.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="avisos" class="scroll">
-      <div id="linea">
-        <p class="lugarhora">12:00 - Sala 4</p>
-        <p class="evento">
-          Ampliación de espacios para ciclos formativos I.E.S. "Alejo Vera" en
-          Marchamalo.
-        </p>
+    <div id="avisos-container">
+      <div id="avisos" class="scroll">
+        <div id="linea">
+          <p class="lugarhora">12:00 - Sala 4</p>
+          <p class="evento">
+            Ampliación de espacios para ciclos formativos I.E.S. "Alejo Vera" en
+            Marchamalo.
+          </p>
+        </div>
+        <div id="linea">
+          <p class="lugarhora">16:00 - Sala 3</p>
+          <p class="evento">
+            Educadores y estrés: explorando la presencia con mindfulness.
+          </p>
+        </div>
+        <div id="linea">
+          <p class="lugarhora">16:30 - Sala 4</p>
+          <p class="evento">Comisión Permanente Consejo Escolar.</p>
+        </div>
+        <div id="linea">
+          <p class="lugarhora">16:30 - Sala 4</p>
+          <p class="evento">Comisión Permanente Consejo Escolar.</p>
+        </div>
+
+        <!--INSERT HERE-->
       </div>
-      <div id="linea">
-        <p class="lugarhora">16:00 - Sala 3</p>
-        <p class="evento">
-          Educadores y estrés: explorando la presencia con mindfulness.
-        </p>
-      </div>
-      <div id="linea">
-        <p class="lugarhora">16:30 - Sala 4</p>
-        <p class="evento">Comisión Permanente Consejo Escolar.</p>
-      </div>
-      <!--INSERT HERE-->
     </div>
     <div id="logo">
       <img src="img/logo-jccm.svg" />
       <img src="img/logo_educacion.svg" />
     </div>
-    <div id="clock" class="dark">
-      <div class="display">
-        <div class="weekdays"></div>
-        <div class="ampm"></div>
-        <div class="alarm"></div>
-        <div class="digits"></div>
+
+    <div class="clock-container">
+      <!-- Parte de arriba: Fecha -->
+      <div id="date" class="date-display">Cargando fecha...</div>
+
+      <!-- Parte de abajo: Hora -->
+      <div class="time-container">
+        <span id="time" class="time-display">00:00</span
+        ><span id="seconds" class="seconds">00</span>
       </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/reloj.js"></script>
-    <script src="js/scroll.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#avisos").verticalScroll();
-      });
-    </script>
+    <script src="js/logo-rotator.js"></script>
   </body>
 </html>
