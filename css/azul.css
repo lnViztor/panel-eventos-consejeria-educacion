@@ -120,8 +120,14 @@ aside {
   0% {
     transform: translateY(0);
   }
-  80% {
+  2% {
+    transform: translateY(0);
+  }
+  78% {
     transform: translateY(-100%);
+  }
+  90% {
+    transform: translateY(0);
   }
   100% {
     transform: translateY(0);

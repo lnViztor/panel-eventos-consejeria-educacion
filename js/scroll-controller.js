@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Si el contenido es mayor que el contenedor, aplicar animación
     if (contentHeight > avisosHeight) {
-      scrollContent.style.animation = "scroll 30s linear infinite";
+      scrollContent.style.animation = "scroll 40s linear infinite";
     } else {
       // Si cabe todo, remover la animación
       scrollContent.style.animation = "none";
