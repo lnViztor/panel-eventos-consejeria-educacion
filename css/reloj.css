@@ -15,7 +15,7 @@
 /* Estilo para la fecha (Parte de arriba) */
 .date-display {
   font-family: "Nunito-Light";
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.1em; /* Ligeramente reducido para Nunito */
   text-transform: lowercase;
@@ -38,6 +38,21 @@
   font-weight: 200;
   color: #ffffff;
   margin-left: 10px;
+}
+
+/* Parpadeo suave del separador de hora */
+.blinking-colon {
+  animation: soft-blink 1s ease-in-out infinite;
+}
+
+@keyframes soft-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }
 
 /* Ajustes para móviles */

@@ -22,7 +22,7 @@ function updateClock() {
   const seconds = String(now.getSeconds()).padStart(2, "0");
 
   // Actualizamos el DOM de la hora y segundos
-  document.getElementById("time").textContent = `${hours}:${minutes}`;
+  document.getElementById("time").innerHTML = `${hours}<span class="blinking-colon">:</span>${minutes}`;
   document.getElementById("seconds").textContent = seconds;
 }
 // Llamamos a la función una vez al inicio para evitar el parpadeo de "00:00"
