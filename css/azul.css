@@ -112,8 +112,8 @@ aside {
 
 .scroll-content {
   width: 100%;
-  animation: scroll 30s linear infinite;
   will-change: transform;
+  /* La animación se aplicará dinámicamente desde scroll-controller.js */
 }
 
 @keyframes scroll {
