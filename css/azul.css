@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Add this for better layout control */
 }
 
 html {
@@ -30,43 +31,37 @@ aside {
 --------------------------*/
 
 #logo {
-  width: 250px;
+  width: 15vw; /* Was 250px */
+  max-width: 250px; /* Add max-width for very large screens */
+  min-width: 150px; /* Add min-width for very small screens */
   position: absolute;
   transition: all 1s ease-in-out; /* Añadimos una transición suave */
 }
 
 #logo.pos-bottom-right {
-  right: 0px;
+  right: 20px;
   bottom: 50px;
 }
 
-/* "Falso" bottom-left, ahora será bottom-right pero más arriba */
 #logo.pos-bottom-left {
-  right: 0px;
-  bottom: 250px; /* Sube el logo */
+  right: 20px;
+  bottom: 250px;
 }
 
 #logo.pos-top-right {
-  right: 0px;
+  right: 20px;
   top: 250px;
 }
 
-/* "Falso" top-left, ahora será top-right pero más abajo */
 #logo.pos-top-left {
-  right: 0px;
-  top: 450px; /* Baja el logo */
+  right: 20px;
+  top: 450px;
 }
 
 #logo img {
-  width: 200px;
-  padding: 15px 25px;
-}
-
-#logo p {
-  color: #75787b;
-  padding: 0px 25px;
-  /* font: 16px Arial, sans-serif; */
-  text-align: center;
+  width: 100%; /* Make image responsive within the logo container */
+  height: auto;
+  padding: 15px; /* Adjust padding */
 }
 
 /*-------------------------
@@ -74,16 +69,18 @@ aside {
 --------------------------*/
 #avisos-container {
   height: 100vh;
+  width: 100vw; /* take full viewport width */
   overflow: hidden;
   position: relative;
 }
 
 .avisos-header {
-  width: 1000px;
+  width: 60%; /* Was 750px */
+  max-width: 760px;
   padding: 12px 20px;
   font-family: "Nunito-Bold";
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #ffffff; /* texto en blanco, como el reloj */
   text-align: center;
   margin: 5px 0 12px 0;
@@ -94,14 +91,16 @@ aside {
   background-color: #3c5ad9; /* mismo color azul del recuadro del reloj */
   border-radius: 10px;
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.15);
-  height: 56px;
+  height: auto;
+  min-height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #avisos {
-  width: 1100px;
+  width: 70%; /* Was 800px */
+  max-width: 800px;
   position: absolute;
   top: 80px; /* comienza debajo del encabezado */
   bottom: 0;
@@ -135,29 +134,56 @@ aside {
 }
 
 #linea {
-  padding: 20px 20px;
-  margin: 20px 20px;
+  padding: 20px;
+  margin: 20px;
   border-bottom: 2px solid #202951;
-  width: 1000px;
+  width: calc(100% - 40px); /* Was 1000px, now fits container */
 }
 
 #linea .lugarhora {
   font-family: "Nunito-Bold";
   font-weight: 700;
-  font-size: 42px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem); /* Responsive font size */
   background-color: #1e73bd;
   border-radius: 10px;
   text-align: center;
-  width: 400px;
-  margin-left: -20px;
+  width: 40%; /* Was 300px */
+  max-width: 300px;
+  margin-left: 0; /* remove negative margin */
+  margin-bottom: 10px; /* Add some space between elements */
 }
 
 #linea .evento {
   font-family: "Rubik-Light";
   font-weight: 300;
-  font-size: 36px;
-  padding: 0px 0px 10px 0px;
-  /* text-shadow: 3px 2px black; */
-  text-indent: 0.4cm;
+  font-size: clamp(1.8rem, 3vw, 2.5rem); /* Responsive font size */
+  padding: 0;
+  text-indent: 0; /* remove indent */
   color: #202951;
+}
+
+/* Media Query for larger screens */
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px; /* Slightly larger base font */
+  }
+
+  .avisos-header {
+    font-size: 1.6rem;
+  }
+
+  #linea {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #linea .lugarhora {
+    width: 30%; /* Adjust width on larger screens */
+    margin-bottom: 0;
+  }
+
+  #linea .evento {
+    width: 70%;
+  }
 }

@@ -15,7 +15,7 @@
 /* Estilo para la fecha (Parte de arriba) */
 .date-display {
   font-family: "Nunito-Light";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.1em; /* Ligeramente reducido para Nunito */
   text-transform: lowercase;
@@ -26,7 +26,7 @@
 /* Estilo para la hora (Parte de abajo) */
 .time-display {
   font-family: "Nunito-Light";
-  font-size: 8rem; /* Tamaño muy grande */
+  font-size: 5rem; /* Tamaño muy grande */
   font-weight: 300; /* Letra fina (Light) */
   line-height: 1;
   font-variant-numeric: tabular-nums; /* Evita que los números "bailen" al cambiar */
@@ -34,7 +34,7 @@
 
 /* Segundero opcional más pequeño */
 .seconds {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 200;
   color: #ffffff;
   margin-left: 10px;
