@@ -205,7 +205,7 @@ class Notification:
                         p = psutil.Popen(["C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
                                           "--kiosk",
                                           "-fullscreen",
-                                          "file:\\C:\\Users\\vvso01.JCLM\\Desktop\\panel\\index.html"])
+                                          "file:\\C:\\Users\\Administrador\\Desktop\\panel\\index.html"])
                         wb.close()
                         print("Ocultando barra de tareas...")
                         hide_taskbar()
